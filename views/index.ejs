@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Activation Email</title>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      html {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-width: 100%;
+        background: #ffffff;
+        color: #020817;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .mainContainer {
+        background-color: #ffffff;
+        max-width: 1200px;
+        margin: 60px auto 0;
+        width: 100%;
+        height: 100%;
+        padding: 50px 10px;
+      }
+      .paragraph {
+        color: #020817;
+        line-height: 1.4;
+        font-weight: 400;
+        font-size: 16px;
+        opacity: 80%;
+      }
+      .headingPrimary {
+        color: #020817;
+        line-height: 1.5;
+        font-weight: 600;
+        font-size: 32px;
+        opacity: 95%;
+      }
+      .headingSecondary {
+        color: #020817;
+        line-height: 1.2;
+        font-weight: 500;
+        font-size: 24px;
+        opacity: 95%;
+      }
+      .headingTertiary {
+        color: #020817;
+        line-height: 1.2;
+        font-weight: 500;
+        font-size: 20px;
+        opacity: 95%;
+      }
+      .unorderedList {
+        list-style: none;
+        margin: 12px 0;
+      }
+      .activationContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 14px auto;
+        width: 600px;
+        background: #f1f5f9;
+        border-radius: 0.5rem;
+        padding: 30px 0;
+        position: relative;
+        border: 1px dashed #1f4f5c;
+      }
+      .activationContainer h2 {
+        color: #0f172a;
+      }
+      .activationContainer strong {
+        color: #0f172a;
+        font-size: 24px;
+        letter-spacing: 3px;
+        font-weight: 600;
+      }
+      .activationIcon {
+        position: absolute;
+        left: -12px;
+        top: -12px;
+        width: 150px;
+        height: 150px;
+        opacity: 50%;
+      }
+      .socialIconsContainer {
+        padding: 60px 0;
+        border-radius: 0.5rem;
+        background-color: #f1f5f9;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border: 1px dashed #1f4f5c;
+      }
+      .socialIcons {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      /* TOOLTIP CLASSES */
+
+      .tooltipTop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .tooltipTop .iconContent {
+        position: relative;
+      }
+      .tooltipTop .iconContent .tooltip {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #020817;
+        padding: 2px 8px;
+        border-radius: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        border: 3px solid transparent;
+        letter-spacing: -0.5;
+        font-weight: 500;
+      }
+      .tooltipTop .iconContent:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+        top: -50px;
+        background-color: #1f4f5c;
+        color: #ebf3f5;
+      }
+      .tooltipTop .iconContent a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 0.5rem;
+        color: #1f4f5c;
+        background-color: #ffffff;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      .tooltipTop .iconContent a:hover {
+        box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+        background-color: #1f4f5c;
+        color: #ebf3f5;
+      }
+      .tooltipTop .iconContent a svg {
+        position: relative;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+      }
+      .tooltipTop .iconContent a:hover {
+        color: #ffffff;
+      }
+      .tooltipTop .iconContent a .filled {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #1f4f5c;
+        transition: all 0.3s ease-in-out;
+      }
+      .tooltipTop .iconContent a:hover .filled {
+        height: 100%;
+        background-color: #1f4f5c;
+        color: #ebf3f5;
+      }
+
+      @media (max-width: 640px) {
+        .mainContainer {
+          width: 95%;
+          margin: 10px auto 0;
+          padding: 20px 0;
+        }
+        .activationContainer {
+          width: 100%;
+        }
+        .paragraph {
+          font-size: 14px;
+        }
+        .headingPrimary {
+          font-size: 24px;
+          font-weight: 500;
+        }
+        .headingSecondary {
+          font-size: 22px;
+          font-weight: 500;
+        }
+        .headingTertiary {
+          font-size: 20px;
+          font-weight: 400;
+        }
+        .activationIcon {
+          opacity: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="mainContainer">
+      <h3 class="headingTertiary">Dear Anamul Hassan,</h3>
+      <p class="paragraph">
+        Thank you for signing up for an account. I'm excited to have you on
+        board!
+      </p>
+      <p class="paragraph">
+        To activate your account and start exploring the features of my
+        platform, please use the following activation code:
+      </p>
+      <div class="activationContainer">
+        <h2 class="headingPrimary">Activation Code</h2>
+        <strong> 4234 </strong>
+      </div>
+
+      <h4 class="paragraph">
+        To complete the registration process, simply follow these steps:
+      </h4>
+
+      <ul class="paragraph unorderedList">
+        <li>◎ Visit [Your Portfolio URL].</li>
+        <li>◎ Enter activation code provided above.</li>
+        <li>◎ Click "Activate Account".</li>
+      </ul>
+      <p class="paragraph">
+        Once your account is activated, you'll gain access to a wide range of
+        features tailored to enhance your experience as a full stack developer.
+      </p>
+      <p class="paragraph">
+        If you have any questions or need further assistance, please don't
+        hesitate to contact my support team at [Your Support Email].
+      </p>
+      <p class="paragraph">
+        Thank you for choosing me. I look forward to seeing you on the platform!
+      </p>
+      <ul class="paragraph unorderedList">
+        <li>Best regards,</li>
+        <li class="heading_tertiary">Anamul Hassan</li>
+      </ul>
+    </section>
+  </body>
+</html>
